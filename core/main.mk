@@ -183,6 +183,7 @@ $(info $(space)$(space)$(space)$(space)https://source.android.com/source/downloa
 $(info ************************************************************)
 endif
 
+# We're Unicorns. We use magic. Not emulators.
 ifndef BUILD_EMULATOR
 ifeq (darwin,$(HOST_OS))
 GCC_REALPATH = $(realpath $(shell which $(HOST_CC)))
@@ -195,11 +196,11 @@ ifneq ($(findstring llvm-gcc,$(GCC_REALPATH)),)
   $(warning ****************************************)
   BUILD_EMULATOR := false
 else
-  BUILD_EMULATOR := true
+  BUILD_EMULATOR := false
 endif
-else   # HOST_OS is not darwin
-  BUILD_EMULATOR := true
-endif  # HOST_OS is darwin
+else
+  BUILD_EMULATOR := false
+endif
 endif
 
 $(shell echo 'VERSIONS_CHECKED := $(VERSION_CHECK_SEQUENCE_NUMBER)' \
