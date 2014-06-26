@@ -27,10 +27,10 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker
 
 # Additional settings used in all AOSP builds
-PRODUCT_PROPERTY_OVERRIDES := \
-    ro.com.android.dateformat=MM-dd-yyyy \
-    ro.config.ringtone=Kuma.ogg \
-    ro.config.notification_sound=Shaula.ogg
+#PRODUCT_PROPERTY_OVERRIDES := \
+#    ro.com.android.dateformat=MM-dd-yyyy \
+#    ro.config.ringtone=Kuma.ogg \
+#    ro.config.notification_sound=Shaula.ogg
 
 # Put en_US first in the list, so make it default.
 PRODUCT_LOCALES := en_US
@@ -39,7 +39,7 @@ PRODUCT_LOCALES := en_US
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 
 # Get some sounds
-$(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)
+#$(call inherit-product, frameworks/base/data/sounds/AudioPackage10.mk)
 
 # Get a list of languages.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/locales_full.mk)
