@@ -492,7 +492,7 @@ else if get_stage("%(bcb_dev)s", "stage") == "3/3" then
 
   script.ShowProgress(0.5, 0)
   script.Print("SimpleAOSP")
-  script.Print("by BaNkS and Gnome")
+  script.Print("Just a simple AOSP ROM")
 
   if OPTIONS.wipe_user_data:
     script.FormatPartition("/data")
