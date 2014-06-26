@@ -1290,7 +1290,7 @@ name := $(TARGET_PRODUCT)
 ifeq ($(TARGET_BUILD_TYPE),debug)
   name := $(name)_debug
 endif
-name := rastakat_$(name)-ota-$(shell date +"%Y-%m-%d")
+name := $(name)-ota-$(shell date +"%-m-%-e-%-y")
 
 INTERNAL_OTA_PACKAGE_TARGET := $(PRODUCT_OUT)/$(name).zip
 
