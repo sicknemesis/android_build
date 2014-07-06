@@ -26,6 +26,7 @@ PRODUCT_PACKAGES := \
     CertInstaller \
     LatinIME \
     Settings \
+    Provision \
     Sync \
     Updater \
     CalendarProvider \
